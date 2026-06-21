@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int a[] = {36,19,29,12,5};
+    int temp;
+    int n = sizeof(a)/sizeof(a[0]);
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-1-i;j++){
+            if(a[j]>a[j+1]){
+                temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
+            }
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<(i+1==n?"":" ");
+    }
+    cout<<"\n";
+}
